@@ -6,11 +6,12 @@ import axios from 'axios'
 
 
 const FeedSection = () => {
+  const API = 'https://mern-post-app-tmhb.onrender.com'
   const [posts, setPosts] = useState([])
 
   useEffect(  () => {
     const fetchPost = async () => {
-      const res = await axios.get('https://mern-post-app-tmhb.onrender.com/posts')
+      const res = await axios.get(`${API}/posts`)
       const data = res.data;
       console.log(data);
       setPosts(data.post)
