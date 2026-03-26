@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 const CreatePost = () => {
+    const API = 'https://mern-post-app-tmhb.onrender.com'
       const navigate = useNavigate()
     
 
@@ -13,7 +14,7 @@ const CreatePost = () => {
         const formData = new FormData(e.target)
 
         try {
-            const res = await axios.post('https://mern-post-app-tmhb.onrender.com/create-post', formData)
+            const res = await axios.post(`${API}/create-post`, formData)
             alert("Post created successfully!")
             console.log(res.data)
             e.target.reset()
