@@ -9,14 +9,15 @@ app.use(express.json());
 
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://sumitkumar112006.github.io'
+    'https://sumitkumar112006.github.io',
+    'https://mern-post-mlexbsepm-amitk839170-gmailcoms-projects.vercel.app'
 ]
 
 app.use(cors({
     origin: (origin, cb) => {
         if (!origin || allowedOrigins.includes(origin)) return cb(null, true)
         return cb(new Error('Not allowed by CORS'))
-    } 
+    }
 }))
 
 
