@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base:'/MERN_Post_App/',
+  base: '/',
   plugins: [react(), tailwindcss()],
 })
