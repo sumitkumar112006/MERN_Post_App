@@ -6,9 +6,20 @@ const cors = require('cors')
  
 const app = express();
 app.use(express.json());
+
+const allowedOrigins = [
+    'http://localhost:5173',
+    'https://sumitkumar112006.github.io'
+]
+
 app.use(cors({
-    origin: 'HTTP://sumitkumar112006.github.io'
+    origin: (origin, cb) => {
+        if (!origin || allowedOrigins.includes(origin)) return cb(null, true)
+        return cb(new Error('Not allowed by CORS'))
+    } 
 }))
+
+
 
 const upload = multer({ storage: multer.memoryStorage() })
 
