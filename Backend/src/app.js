@@ -10,7 +10,8 @@ app.use(express.json());
 const allowedOrigins = [
     'http://localhost:5173',
     'https://sumitkumar112006.github.io',
-    'https://mern-post-mlexbsepm-amitk839170-gmailcoms-projects.vercel.app'
+    'https://mern-post-7l0ix2vwo-amitk839170-gmailcoms-projects.vercel.app'
+    
 ]
 
 app.use(cors({
