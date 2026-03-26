@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigins = [
-    'http://localhost:5173',
+    'http://localhost:5173/MERN_Post_App/',
     'https://sumitkumar112006.github.io'
 ]
 
